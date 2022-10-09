@@ -96,6 +96,10 @@ func InitBlockChain(address string) *BlockChain {
 	return &blockchain
 }
 
+func (chain *BlockChain) GetBestHeight() int {
+	return 0
+}
+
 func (chain *BlockChain) AddBlock(transactions []*Transaction) *Block {
 	var lastHash []byte
 

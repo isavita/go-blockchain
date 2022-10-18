@@ -209,7 +209,7 @@ func HandleBlock(request []byte, chain *blockchain.BlockChain) {
 	block := blockchain.Deserialize(blockData)
 	fmt.Println("Recevied a new block!")
 	chain.AddBlock(block)
-	fmt.Println("Added block %x\n", block.Hash)
+	fmt.Println("Added block %s\n", block.Hash)
 
 	if len(blocksInTransit) > 0 {
 		blockHash := blocksInTransit[0]
